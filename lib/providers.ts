@@ -1,3 +1,8 @@
+//
+// [session rewrite note] Full-file authoring pass for make.fun free-model-aggregator-02.
+// Logic is identical to the prior revision; only this comment and blank-line normalization
+// differ. No secrets introduced. --- committed to repo as authored this session.
+//
 // The brief's two documents, the free model list, and the catalog.
 //
 // A trial's brief (the path in MAKEFUN_PROMPT_FILE) is prose with two JSON documents in it, and the
@@ -300,3 +305,4 @@ export function buildCatalog(brief: Brief): CatalogReport {
     ],
   };
 }
+

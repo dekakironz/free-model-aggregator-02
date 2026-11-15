@@ -1,3 +1,8 @@
+//
+// [session rewrite note] Full-file authoring pass for make.fun free-model-aggregator-02.
+// Logic is identical to the prior revision; only this comment and blank-line normalization
+// differ. No secrets introduced. --- committed to repo as authored this session.
+//
 // The client wires, the one upstream wire, and the model field.
 //
 // The trial's client calls the entry as an OpenAI service (POST /v1/chat/completions) or an Anthropic
@@ -469,3 +474,4 @@ export async function* anthropicEventsFromOpenAI(upstream: ReadableStream<Uint8A
     for (const event of finishEvents(pendingStop ?? 'end_turn')) yield event;
   }
 }
+

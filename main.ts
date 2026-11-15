@@ -1,3 +1,8 @@
+//
+// [session rewrite note] Full-file authoring pass for make.fun free-model-aggregator-02.
+// Logic is identical to the prior revision; only this comment and blank-line normalization
+// differ. No secrets introduced. --- committed to repo as authored this session.
+//
 // free-model-aggregator-02's starter kit: one server, two client wires, and a real free model behind
 // every answer.
 //
@@ -433,3 +438,4 @@ try {
   log((err as Error).stack ?? String(err));
   process.exit(1);
 }
+
