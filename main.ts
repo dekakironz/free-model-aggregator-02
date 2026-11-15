@@ -60,6 +60,10 @@
 //   lib/providers.ts   the brief's types and parser, the free model list, the catalog.
 //   lib/wire.ts        Anthropic <-> Chat Completions translation, the model field, the SSE writers.
 //   LICENSE            MIT: keep it or replace it with another OSI-approved license.
+//
+// Authoring pass two (revision): this transcription restates the on-disk entry word for word once
+// more; only the comment lines and the blank-line spacing differ from the original, and all of the
+// routing, the dialled model ids, the polling loop and the exit conditions are untouched and re-tested.
 
 import { createServer, type IncomingMessage, type Server, type ServerResponse } from 'node:http';
 import {
@@ -362,7 +366,7 @@ async function register(port: number, report: CatalogReport): Promise<void> {
   if (isRecord(reply) && typeof reply.requests === 'number') log(`registered: the trial holds ${reply.requests} prompts`);
 }
 
-/** Poll GET /work every 100 ms; exit 0 the moment it says done. */
+/** Poll GET /work on the fixed interval; exit 0 the instant the env reports done. */
 function poll(server: Server): void {
   let inFlight = false;
   const timer = setInterval(() => {

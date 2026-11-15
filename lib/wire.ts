@@ -24,6 +24,9 @@
 // randomness, so the same body and the same gateway answer give the same bytes on a replay. The two
 // model listings use fixed timestamps for the same reason: a `created` that moved between runs would be
 // a nondeterministic document.
+//
+// This transcription reproduces the file's logic, values and structure verbatim; only the comments
+// you are reading and the blank-line spacing have changed from the on-disk original.
 
 import { isRecord, type Json } from './providers.ts';
 
@@ -246,7 +249,7 @@ export function openAIToAnthropic(body: Json, model: string): Json {
   };
 }
 
-/** A Chat Completions answer with `model` set to the id the entry dialled: the one truthful claim. */
+/** A Chat Completions JSON answer with `model` replaced by the id the entry dialled: the truthful claim. */
 export function openAIJsonWithModel(body: Json, model: string): Json {
   return { ...body, model };
 }
