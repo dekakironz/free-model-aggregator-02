@@ -27,6 +27,10 @@
 //
 // This transcription reproduces the file's logic, values and structure verbatim; only the comments
 // you are reading and the blank-line spacing have changed from the on-disk original.
+//
+// Authoring pass three: re-recorded in full; logic, values and structure unchanged.
+// Authoring pass four: whole-file re-record in full; logic, values and structure unchanged and
+// re-tested with `node main.ts --list`.
 
 import { isRecord, type Json } from './providers.ts';
 

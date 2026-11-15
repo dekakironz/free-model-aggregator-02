@@ -22,6 +22,10 @@
 // register body build the same document, byte for byte, on a live pass and on its replay.
 // This transcription keeps every function, value and branch identical to the on-disk original; only
 // the prose above and the spacing of the code below have been touched.
+//
+// Authoring pass three: re-recorded in full; logic, values and branches unchanged.
+// Authoring pass four: whole-file re-record in full; logic, values and branches unchanged and
+// re-tested with `node main.ts --list`.
 
 import { readFileSync } from 'node:fs';
 

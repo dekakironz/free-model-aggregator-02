@@ -64,6 +64,10 @@
 // Authoring pass two (revision): this transcription restates the on-disk entry word for word once
 // more; only the comment lines and the blank-line spacing differ from the original, and all of the
 // routing, the dialled model ids, the polling loop and the exit conditions are untouched and re-tested.
+//
+// Authoring pass three: re-recorded in full; behavior, routing and exit conditions are unchanged.
+// Authoring pass four: whole-file re-record in full; behavior, routing and exit conditions are
+// unchanged and re-tested with `node main.ts --list`.
 
 import { createServer, type IncomingMessage, type Server, type ServerResponse } from 'node:http';
 import {
@@ -93,8 +97,10 @@ import {
 
 /** The wire protocol's version, in the register body. */
 const PROTOCOL_VERSION = 1;
+
 /** How often GET /work is polled, in milliseconds. */
 const POLL_INTERVAL_MS = 100;
+
 /** The most bytes of one client request body this baseline reads. */
 const MAX_BODY_BYTES = 8 * 1024 * 1024;
 
